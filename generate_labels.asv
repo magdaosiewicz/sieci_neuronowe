@@ -1,0 +1,11 @@
+function [labels] = generate_labels(number_of_labels, ocurrences)
+
+labels = zeros(number_of_labels * occurences);
+for i=0:number_of_labels-1
+   for j=1:occurences
+       labels(occurences*i + j) = i;
+   end
+end
+save('w.mat', 'w');
+
+end
